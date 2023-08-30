@@ -1,7 +1,7 @@
 {
-  "name": "zeromq",
-  "version": "6.0.0-beta.17",
-  "description": "Next-generation ZeroMQ bindings for Node.js",
+  "name": "@ably/zeromq",
+  "version": "6.0.0-beta.ably.0",
+  "description": "Next-generation ZeroMQ bindings for Node.js (ably fork)",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "typesVersions": {
@@ -14,7 +14,7 @@
   "gypfile": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/zeromq/zeromq.js.git"
+    "url": "https://github.com/ably-forks/zeromq.js.git"
   },
   "homepage": "http://zeromq.github.io/zeromq.js/",
   "dependencies": {
