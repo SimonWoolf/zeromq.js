@@ -54,6 +54,10 @@
         'ZMQ_STATIC',
       ],
 
+      'link_settings': {
+        'libraries': ['-lgnutls'],
+      },
+
       'conditions': [
         ["zmq_draft == 'true'", {
           'defines': [
