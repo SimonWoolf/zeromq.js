@@ -1326,6 +1326,20 @@ export class Router extends Socket {
   mandatory: boolean
 
   /**
+   * ZMQ_ROUTER_NOTIFY
+   *
+   * Enable connect and disconnect notifications on a ROUTER socket. When enabled,
+   * the socket delivers a zero-length message (with routing-id as first frame)
+   * when a peer connects or disconnects. This option only applies to stream oriented
+   * (tcp, ipc) transports.
+   * 0 = no notifications
+   * 1 = notify connection events only
+   * 2 = notify disconnection events only
+   * 3 = notify both connection and disconnection events
+   */
+  notify: 0 | 1 | 2 | 3;
+
+  /**
    * ZMQ_PROBE_ROUTER
    *
    * When set to `true`, the socket will automatically send an empty message
@@ -1858,7 +1872,7 @@ defineOpt([Socket], "loopbackFastPath", 94, Type.Bool)
 /* The following options are still in DRAFT. */
 /* defineOpt([Socket], "metadata", 95, Type.String) */
 /* defineOpt([Socket], "multicastLoop", 96, Type.String) */
-/* defineOpt([Router], "notify", 97, Type.String) */
+defineOpt([Router], "notify", 97, Type.Int32)
 /* defineOpt([XPublisher], "manualLastValue", 98, Type.String) */
 /* defineOpt([Socket], "socksUsername", 99, Type.String) */
 /* defineOpt([Socket], "socksPassword", 100, Type.String) */
