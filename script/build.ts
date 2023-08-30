@@ -65,10 +65,8 @@ function main() {
     exec(`tar xzf "${tarball}"`, execOptions)
   }
 
-  if (process.env.ZMQ_DRAFT === "true") {
-    console.log("Enabling draft support")
-    build_options += " -DENABLE_DRAFTS=ON"
-  }
+  console.log("Enabling draft support")
+  build_options += " -DENABLE_DRAFTS=ON"
 
   console.log(`Building libzmq ${CMAKE_BUILD_TYPE}`)
 
